@@ -13,4 +13,14 @@ Whereas the negative words associated with low average star rating were (worst, 
 
 ##### 2. Data Processing and Cleaning
 
-converting the nominal data to text. We tokenized, lower cased, and filtered the stop words (the, an, a etc). Also we decided to drop the words of character length lower than 3 and greater than 25 to get more sensible words.
+Converted the nominal data to text than tokenized, lower cased, and filtered the stop words (the, an, a etc). Also dropped the words of character length lower than 3 and greater than 25 to reduce noise
+
+tf-idf matrix multiplied with star rating to get average score association for words
+
+##### 3. Sentiment prediction based on different dictionaries
+
+Harvard (Positive & Negative), Bing Liu and AFFIN (Web-Based) dictionaries has been used
+
+Cumulative positive > Cumulative Negative (tf-idf matrix with star rating) for prediction classification
+
+We tried logistic regression, random forest, knn over different dictionaries to train models
